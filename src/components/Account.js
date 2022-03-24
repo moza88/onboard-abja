@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import AuthUserContext from "./AuthUserContext";
 import withAuthorization from "./withAuthorization"; //redirects to sign in if user not signed in
 import { db, auth } from '../firebase/firebase';
-import Navigation from "./Navigation";
-import Footer from './Footer';
+import Navigation from "./header/Navigation";
+import Footer from './footer/Footer';
 import PasswordChangeForm from './PasswordChange';
 import { Container, Table } from "react-bootstrap";
 import ChangeDetailsForm from './ChangeDetails'
-import MainBanner from "./Banner";
 
 const INITIAL_STATE = {
   name: "",
@@ -36,7 +35,6 @@ class AccountPage extends Component {
         {authUser => (
           <Container style={{marginTop: "110px"}}>
           <center>
-            <MainBanner />
             <div className="div-flex">
               <div>
                 <h2>Your Profile</h2>

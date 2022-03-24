@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Navigation from "./Navigation";
-import Footer from "./Footer";
+import Navigation from "./header/Navigation";
+import Footer from "./footer/Footer";
 
 const CardPage = props => {
     const [id, setId] = useState(0);

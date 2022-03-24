@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import * as routes from "./constants/routes";
-import SignUpPage from "./components/SignUp";
+import SignUp from "./components/auth/SignUp";
 import SignInPage from "./components/SignIn";
 import PasswordForgetPage from "./components/PasswordForget";
 import AccountPage from "./components/Account";
@@ -14,7 +14,7 @@ import CardPage from './components/CardPage';
 const App = () => (
   <BrowserRouter>
       <Route exact path={routes.LANDING} component={LandingPage} />
-      <Route exact path={routes.SIGN_UP} component={SignUpPage} />
+      <Route exact path={routes.SIGN_UP} component={SignUp} />
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
       <Route
         exact

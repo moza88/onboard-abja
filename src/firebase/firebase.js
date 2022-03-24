@@ -2,11 +2,11 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
 import "firebase/firestore";
-import config from './env';
+import firebaseConfig from './firebaseConfig.js';
 
 if (!firebase.apps.length) {
   //initializing with the config object
-  firebase.initializeApp(config);
+  firebase.initializeApp(firebaseConfig);
 }
 
 const db = firebase.database();

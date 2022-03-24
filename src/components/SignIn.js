@@ -5,16 +5,14 @@ import { SignUpLink } from "./SignUp";
 import { PasswordForgetLink } from "./PasswordForget";
 import { auth } from "../firebase";
 import * as routes from "../constants/routes";
-import Footer from './Footer';
-import Navigation from './Navigation';
-import MainBanner from "./Banner";
+import Footer from './footer/Footer';
+import Navigation from './header/Navigation';
 
 const SignInPage = ({ history }) => {
   return (
     <div className="div-flex" style={{marginTop: "110px"}}>
       <Navigation />
       <center>
-        <MainBanner />
         <SignInForm history={history} />
         <SignUpLink />
         <PasswordForgetLink />

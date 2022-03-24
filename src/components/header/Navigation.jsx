@@ -1,16 +1,25 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import * as routes from "../constants/routes";
-import SignOutButton from './SignOut';
-import { auth } from '../firebase/firebase';
-import cardDetails from './CardDetails';
+import * as routes from "../../constants/routes";
+import SignOutButton from '../SignOut';
+import { auth } from '../../firebase/firebase';
+import cardDetails from '../CardDetails';
+import Typography from '@material-ui/core/Typography';
 
 function Navigation() {
     return (
         <div style={{position: "fixed", top: "0", width: "100%", zIndex: "99"}}>
           <Navbar className="header" collapseOnSelect expand="lg" bg="primary" variant="dark">
-            <Navbar.Brand><Link to={routes.LANDING}><Button id="mylogo">Brand Logo</Button></Link></Navbar.Brand>
+            <Navbar.Brand>
+                <Link to={routes.LANDING}>
+                    <Button id="mylogo">
+                        <Typography variant="h5" color="inherit" noWrap>
+                        Abja Network
+                        </Typography>
+                    </Button>
+                </Link>
+            </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
@@ -26,7 +35,7 @@ function Navigation() {
                   <Nav.Link href='#ourfooter'>
                     <Button>Feedback</Button>
                   </Nav.Link>
-                  <Nav.Link href="https://code-mergers-org.netlify.app/">
+                  <Nav.Link href="#about">
                     <Button>About Us</Button>
                   </Nav.Link>
                 </Nav>

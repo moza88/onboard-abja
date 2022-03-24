@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { db } from '../firebase/firebase';
+import { db } from '../../firebase/firebase';
 import { Button, Form , InputGroup } from 'react-bootstrap';
+import { Link, Typography } from '@material-ui/core/';
 
 class Footer extends Component {
     state = {feedback: ""}
@@ -23,6 +24,8 @@ class Footer extends Component {
         const Invalid = feedback === "";
         return (<div id="ourfooter">
             <br/>
+            <Typography variant="body2" color="textSecondary" align="center">
+
             <footer>
                 <div class="container-foot">
                     <section class="ft-main">
@@ -87,6 +90,7 @@ class Footer extends Component {
                     </section>
                 </div>
             </footer>
+            </Typography>
         </div>);
     }
     

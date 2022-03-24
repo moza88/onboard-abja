@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button, Form, InputGroup, Container } from "react-bootstrap";
-import Footer from './Footer';
-import Navigation from './Navigation';
+import Footer from './footer/Footer';
+import Navigation from './header/Navigation';
 import { auth } from "../firebase";
 import * as routes from "../constants/routes";
-import MainBanner from "./Banner";
 
 //it resets your password. It doesn’t matter if you are authenticated or not
 const PasswordForgetPage = () => (
   <div className="div-flex">
     <Navigation />
     <center style={{marginTop: "110px"}}>
-      <MainBanner />
       <PasswordForgetForm />
       <br/>
     </center>

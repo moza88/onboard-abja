@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
-import Navigation from "./Navigation";
+import Navigation from "./header/Navigation";
 import Jumbo from "./Jumbo";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import Cards from "./Cards";
 
 const INITIAL_STATE = {

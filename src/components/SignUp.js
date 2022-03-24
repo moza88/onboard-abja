@@ -4,15 +4,13 @@ import { Link, withRouter } from "react-router-dom";
 import * as routes from "../constants/routes";
 import { Button, Form, InputGroup, Container } from "react-bootstrap";
 
-import MainBanner from "./Banner";
-import Footer from './Footer';
-import Navigation from './Navigation';
+import Footer from './footer/Footer';
+import Navigation from './header/Navigation';
 
 const SignUpPage = ({ history }) => (
   <div>
     <Navigation />
     <div className="div-flex" style={{marginTop: "110px"}}>
-      <MainBanner />
       <center>
         <SignUpForm history={history} />
       </center>
@@ -101,6 +99,8 @@ class SignUpForm extends Component {
     }
 
     return (
+
+
       <div className="inputclass">
         <Container>
           <h2 id="mytexth2">Sign Up</h2>
